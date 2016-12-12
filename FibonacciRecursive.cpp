@@ -13,5 +13,5 @@ int fibonacci(int n) {
 }
 
 int main() {
-  cout << fibonacci(5);
+  cout << fibonacci(6);
 }
