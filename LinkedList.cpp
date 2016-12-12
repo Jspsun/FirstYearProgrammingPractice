@@ -43,7 +43,7 @@ public:
       tempNode = tempNode->next;
 
       if (tempNode == NULL) {
-        return 999;
+        return NULL;
       }
     }
     return tempNode->data;
