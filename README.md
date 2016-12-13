@@ -10,7 +10,7 @@ I just wanted to to some sample code that might pop up on my ECE 150 exam. Imple
 [x]fibonacci (recursive)
 []fibonacci (dp)   
 [x]getMaxInt (recursive)   
-[]greatest common denominator   
+[x]greatest common denominator   
 
 ##Topics worth considering
 >header files   
