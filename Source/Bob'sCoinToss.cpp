@@ -4,19 +4,21 @@ struct gameResultType {
  }
  
  gameResultType coinToss(unsigned int initial, unsigned int target) {
-   numToss = 0;
-   amount = initial;
+   gameResultType game;
    
-   while (amount) {
-    if (amount >= target) {
-      return;               //not sure what the purpose of the function is so I'll just return to exit
+   game.numToss = 0;
+   game.amount = initial;
+   
+   while (game.amount) {
+    if (game.amount >= target) {
+      return game;               //not sure what the purpose of the function is so I'll just return to exit
     }
     int bet;
-    if (amount%2) {
-      bet = amount/2+1;
+    if (game.amount%2) {
+      bet = game.amount/2+1;
     }
     else {
-      bet = amount/2;
+      bet = game.amount/2;
     }
     
     int heads = rand()%2;
@@ -28,8 +30,8 @@ struct gameResultType {
       bet = -bet;
     }
     
-    amount = amount+bet;
+    game.amount = game.amount+bet;
     numToss++;
    }
-   return;
+   return game;
 }
