@@ -7,7 +7,7 @@ I just wanted to to some sample code that might pop up on my ECE 150 exam. Imple
 []stack   
 [x]linkedList   
 [x]fibonacci (iterative)   
-[x]fibonacci (recursive)
+[x]fibonacci (recursive)   
 []fibonacci (dp)   
 [x]getMaxInt (recursive)   
 [x]greatest common denominator   
