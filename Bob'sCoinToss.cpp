@@ -29,4 +29,7 @@ struct gameResultType {
     }
     
     amount = amount+bet;
+    numToss++;
+   }
+   return;
 }
