@@ -9,7 +9,7 @@ I just wanted to to some sample code that might pop up on my ECE 150 exam. Imple
 [x]fibonacci (iterative)   
 [x]fibonacci (recursive)
 []fibonacci (dp)   
-[]getMaxInt (recursive)   
+[x]getMaxInt (recursive)   
 []greatest common denominator   
 
 ##Topics worth considering
