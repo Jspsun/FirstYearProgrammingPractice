@@ -1,0 +1,72 @@
+#include <iostream>
+
+using namespace std;
+
+struct Node{
+	int data;
+	Node* next;
+};
+
+Node* insert(Node* n, int d){
+	Node* newNode = new Node;
+	newNode->data = d;
+	newNode->next = n;
+	return newNode;
+}
+
+Node* removeByIndex(Node *n, int i) {
+	//error checking
+
+	//i needs to be greater than zero
+	if(i < 0){
+		cerr << "ERROR: i must be greater than 0";
+		return 0;
+	}
+	
+	//empty linked list
+	if(n == 0){
+		cerr << "ERROR: List is empty";
+		return 0;
+	}
+		
+	Node* head = new Node;
+	Node* temp;
+	
+	if (i == 0) {
+		temp = n;
+		head = n->next;
+	}
+	else{
+		head->data = n->data;
+		head->next = n->next;
+		while(i>1){
+			if(n->next == 0){
+				cerr << "ERROR: i was too large";
+				return 0; //i was too long
+			}
+			n = n->next;
+			i--;
+		}
+		temp = n->next;
+		n->next = temp->next; //also n->next->next;
+	}
+	//cout << temp->data << endl;
+	delete temp;
+	return head;
+}
+
+int main(){
+	Node* n = 0;
+	n = insert(n,3);
+	n = insert(n, 21);
+	n = insert(n, -19);
+	n = insert(n, 46);
+	
+	//n = removeByIndex(n, -1);
+	//n = removeByIndex(n, 5);
+	//n = removeByIndex(n, 0);
+	//n = removeByIndex(n, 1);
+	//n = removeByIndex(n, 2);
+	
+	return 0;
+}
